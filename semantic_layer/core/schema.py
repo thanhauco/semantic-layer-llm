@@ -14,3 +14,17 @@ class Dimension(BaseModel):
     description: Optional[str] = None
     type: DataType
     sql: str
+
+class AggregationType(str, Enum):
+    SUM = "sum"
+    COUNT = "count"
+    AVG = "avg"
+    MIN = "min"
+    MAX = "max"
+
+class Metric(BaseModel):
+    name: str
+    description: Optional[str] = None
+    type: DataType
+    aggregation: AggregationType
+    sql: str
