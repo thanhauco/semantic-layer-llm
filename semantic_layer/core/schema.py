@@ -28,3 +28,12 @@ class Metric(BaseModel):
     type: DataType
     aggregation: AggregationType
     sql: str
+
+from typing import List
+
+class Table(BaseModel):
+    name: str
+    sql_table_name: str
+    description: Optional[str] = None
+    dimensions: List[Dimension] = []
+    metrics: List[Metric] = []
