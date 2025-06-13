@@ -37,3 +37,19 @@ class Table(BaseModel):
     description: Optional[str] = None
     dimensions: List[Dimension] = []
     metrics: List[Metric] = []
+
+class JoinType(str, Enum):
+    LEFT = "left"
+    INNER = "inner"
+    FULL = "full"
+
+class Join(BaseModel):
+    from_table: str
+    to_table: str
+    type: JoinType
+    sql_on: str
+
+class SemanticModel(BaseModel):
+    name: str
+    tables: List[Table]
+    joins: List[Join] = []
