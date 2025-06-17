@@ -1,5 +1,6 @@
 from semantic_layer.core.schema import SemanticModel, Dimension, Metric
 from .query import QueryRequest
+from .filters import FilterBuilder
 from typing import Optional
 
 class SqlCompiler:
@@ -30,6 +31,16 @@ class SqlCompiler:
         
         if request.dimensions:
             sql += f" GROUP BY {', '.join(request.dimensions)}"
+        
+        # Add WHERE clause
+        if request.filters:
+            where_clause = FilterBuilder.build_where_clause(request.filters)
+            if where_clause:
+                # Insert WHERE before GROUP BY
+                if " GROUP BY" in sql:
+                    sql = sql.replace(" GROUP BY", f" WHERE {where_clause} GROUP BY")
+                else:
+                    sql += f" WHERE {where_clause}"
         
         if request.limit:
             sql += f" LIMIT {request.limit}"
