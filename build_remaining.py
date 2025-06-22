@@ -440,6 +440,10 @@ class RedisCache:
 """)
 next_commit("Add Redis cache interface")
 
+os.makedirs("semantic_layer/optimization", exist_ok=True)
+with open("semantic_layer/optimization/__init__.py", "w") as f:
+    f.write("")
+
 with open("semantic_layer/optimization/query_optimizer.py", "w") as f:
     f.write("""class QueryOptimizer:
     def optimize(self, sql: str) -> str:
@@ -504,6 +508,7 @@ def test_end_to_end_query():
 next_commit("Add integration tests")
 
 # Documentation
+os.makedirs("docs", exist_ok=True)
 with open("docs/API.md", "w") as f:
     f.write("""# API Documentation
 
@@ -526,6 +531,7 @@ with open("docs/ARCHITECTURE.md", "w") as f:
 next_commit("Add architecture documentation")
 
 # Final commits
+os.makedirs("deploy", exist_ok=True)
 for i, feature in enumerate([
     "Add deployment configuration",
     "Add Docker support",
