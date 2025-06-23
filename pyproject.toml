@@ -7,6 +7,8 @@ authors = ["Dev Team <dev@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 pydantic = "^2.0.0"
+pandas = "^2.0.0"
+duckdb = "^0.8.0"
 
 [build-system]
 requires = ["poetry-core"]
