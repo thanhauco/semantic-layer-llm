@@ -6,3 +6,4 @@ class QueryRequest(BaseModel):
     dimensions: List[str] = []
     filters: Optional[Dict[str, Any]] = None
     limit: Optional[int] = None
+    order_by: Optional[List[str]] = None
