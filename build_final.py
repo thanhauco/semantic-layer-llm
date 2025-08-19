@@ -54,6 +54,8 @@ os.makedirs("semantic_layer/ui", exist_ok=True)
 os.makedirs("docs", exist_ok=True)
 os.makedirs("deploy", exist_ok=True)
 os.makedirs("tests", exist_ok=True)
+os.makedirs("examples", exist_ok=True)
+os.makedirs(".github/workflows", exist_ok=True)
 
 # Commit 60: Query optimizer
 with open("semantic_layer/optimization/query_optimizer.py", "w") as f:
@@ -92,6 +94,7 @@ with open("semantic_layer/optimization/index_advisor.py", "w") as f:
 next_commit("Add index recommendation engine")
 
 # Commit 63: Telemetry
+os.makedirs("semantic_layer/telemetry", exist_ok=True)
 with open("semantic_layer/telemetry/__init__.py", "w") as f:
     f.write("")
 with open("semantic_layer/telemetry/metrics.py", "w") as f:
