@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    build: ..
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:pass@db:5432/semantic
+    depends_on:
+      - db
+      - redis
+  
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: semantic
+  
+  redis:
+    image: redis:7-alpine
