@@ -54,6 +54,10 @@ os.makedirs("semantic_layer/advanced", exist_ok=True)
 os.makedirs("semantic_layer/streaming", exist_ok=True)
 os.makedirs("semantic_layer/governance", exist_ok=True)
 os.makedirs("semantic_layer/ai", exist_ok=True)
+os.makedirs("semantic_layer/testing", exist_ok=True)
+os.makedirs("semantic_layer/sdk", exist_ok=True)
+os.makedirs("semantic_layer/monitoring", exist_ok=True)
+os.makedirs("semantic_layer/cli", exist_ok=True)
 
 # Commit 1: Incremental materialization
 with open("semantic_layer/advanced/__init__.py", "w") as f:
