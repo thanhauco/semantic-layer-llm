@@ -4,6 +4,12 @@ A production-ready Semantic Layer bridging data warehouses and Large Language Mo
 
 ## ✨ Features
 
+### Enterprise Features
+- 🔌 **SQL API (Headless BI)**: Native Postgres wire protocol support for Tableau/PowerBI
+- ⚡ **Active Semantic Layer**: Trigger webhooks and actions based on metric thresholds
+- 🤝 **Collaborative Knowledge Graph**: Annotations, endorsements, and lineage discussions
+- 🔄 **dbt Integration**: Native import of dbt Semantic Layer definitions
+
 ### Core Capabilities
 - 🎯 **Declarative Schema**: Define metrics and dimensions using Pydantic models or YAML
 - 🔌 **Multi-Warehouse Support**: Postgres, Snowflake, DuckDB adapters with dialect-specific SQL generation
