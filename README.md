@@ -5,6 +5,7 @@ A production-ready Semantic Layer bridging data warehouses and Large Language Mo
 ## ✨ Features
 
 ### Visionary Features (Late 2025)
+- 🕸️ **GraphRAG Engine**: Knowledge Graph-augmented retrieval using Neo4j, Kùzu, or FalkorDB
 - 🔗 **Universal Entity Resolution**: Cross-system ID stitching and canonical identity resolution
 - 🔮 **Predictive Cache Warming**: AI-driven pre-computation based on usage patterns
 - 🧬 **Generative Schema Designer**: Self-improving semantic definitions from raw SQL logs
