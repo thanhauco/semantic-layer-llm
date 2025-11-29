@@ -4,6 +4,12 @@ A production-ready Semantic Layer bridging data warehouses and Large Language Mo
 
 ## ✨ Features
 
+### Visionary Features (Late 2025)
+- 🔗 **Universal Entity Resolution**: Cross-system ID stitching and canonical identity resolution
+- 🔮 **Predictive Cache Warming**: AI-driven pre-computation based on usage patterns
+- 🧬 **Generative Schema Designer**: Self-improving semantic definitions from raw SQL logs
+- 🕸️ **Data Mesh Federation**: Distributed metric subscription across domains
+
 ### Enterprise Features
 - 🔌 **SQL API (Headless BI)**: Native Postgres wire protocol support for Tableau/PowerBI
 - ⚡ **Active Semantic Layer**: Trigger webhooks and actions based on metric thresholds
